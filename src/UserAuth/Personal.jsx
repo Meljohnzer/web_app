@@ -107,9 +107,9 @@ export default function Personal () {
                 setIsRedirect(true);
        // Set redirect state to true after form submission is successful
               if(user.usertype === "Student"){
-              navigate('/Seducation')
+              navigate('/web_app/Seducation')
               }else{
-            navigate('/Ecompany');
+            navigate('/web_app/Ecompany');
           }
             }).catch((err)=>{
               alert("this Error in User Adress")

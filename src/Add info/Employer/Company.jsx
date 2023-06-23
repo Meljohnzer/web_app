@@ -188,7 +188,7 @@ export default function Company () {
       
     <button className='px-10 py-2 rounded-md w-1/2 text-blue-600 flex items-center justify-center' 
     style={{ width: 50}}>
-    <Link to="/home"> Skip</Link>
+    <Link to="/web_app"> Skip</Link>
     </button>
     <button className='active:scale-[.98] active:duration-75 translate-all hover:scale-[1.01] ease-in-out bg-blue-600 text-white px-10 py-2 rounded-md w-1/2 flex items-center justify-center' 
     type="submit"
