@@ -5,7 +5,8 @@ import { useState, useRef } from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import img from '../../Images/profile.png'
+import UserContext from '../../api/context/context';
 const Profile = (props) => {
 
 
@@ -21,7 +22,7 @@ const Profile = (props) => {
     console.log(file);
     setImage(event.target.file[0]);
   }
-
+  const {user} = React.useContext(UserContext);
     const [IsDrawerOpen, setIsDrawerOpen] = useState(false)
     // if(!props.profile){
     //   return null
@@ -47,14 +48,13 @@ const Profile = (props) => {
             <div className='bg-slate-200 rounded-3xl p-4 flex flex-col items-center '  >
                 
                   <div   onClick={handleAvatarClick} >
-                 {props.profile[0].profile  &&<img src={props.profile[0].profile ? props.profile[0].profile:'./img/profile.png'} alt='avatar' className="rounded-full h-32 " />}
-                 {props.profile[0].userdetails && <img src={props.profile[0].userdetails[0].profile ? props.profile[0].userdetails[0].profile:'./img/profile.png'} alt='avatar' className="rounded-full h-32 " />}
-
+              {user.usertype === "Employer" && <img src={props.profile[0].profile ? props.profile[0].profile:img} alt='avatar' className="rounded-full h-32 " /> }
+                 {user.usertype === "Student"  && <img src={props.profile[0].userdetails[0].profile ? props.profile[0].userdetails[0].profile:'./img/profile.png'} alt='avatar' className="rounded-full h-32 " />}
                     <input type='file' onChange={handleImageChange} ref={inputRef} className='hidden' />
                   </div>
-                  
-               {props.profile[0].profile  && <div id='title' className='font-bold tracking-tight text-2xl pb-2'>{props.profile[0].last_name} {props.profile[0].first_name}</div>}
-                {props.profile[0].userdetails && <div id='title' className='font-bold tracking-tight text-2xl pb-2'>{props.profile[0].userdetails[0].last_name} {props.profile[0].userdetails[0].first_name}</div>}
+                  {/* {console.log(user)} */}
+               {user.usertype === "Employer" && <div id='title' className='font-bold tracking-tight text-2xl pb-2'>{props.profile[0].last_name} {props.profile[0].first_name}</div>}
+                {user.usertype === "Student"  && <div id='title' className='font-bold tracking-tight text-2xl pb-2'>{props.profile[0].userdetails[0].last_name} {props.profile[0].userdetails[0].first_name}</div>}
                 <div className='grid gap-5 grid-cols-2 pt-7'>
                   <button className=' p-1 rounded-md shadow-md bg-indigo-500 hover:bg-indigo-600 text-white font-semibold'>
                     Message </button>

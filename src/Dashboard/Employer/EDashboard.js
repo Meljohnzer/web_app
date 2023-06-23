@@ -43,8 +43,8 @@ export default function Employer(props  ) {
           }
 
 
-      },[])
-
+      },[user.id])
+console.log(user)
     return (
       <div className="bg-cover bg-fixed bg-center absolute inset-0" style={{ backgroundImage: `url(${backgroundImage})` ,minHeight:"100%"}}>
       <EmpAppbar/>

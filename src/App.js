@@ -64,10 +64,10 @@ const providervalue = useMemo(() => ({ user, setUser, page, setPage }), [user, s
     <div>
     <UserContext.Provider value={providervalue}>
     <Routes basename = "/web_app">
+      <Route path="web_app" element={<Login/>} />
        <Route path="SDashboard" element={<SDashboard/>} /> 
          <Route path="register" element={<Register/>} /> 
         <Route path="confirmemail" element={<Confirmemail/>} />
-        <Route path="web_app" element={<Login/>} />
         <Route path="web_app/personal" element={<Personal/>} />
         <Route path="web_app/Ecompany" element={<Company/>} />
         <Route path="web_app/Sguardian" element={<Guardian/>} />
