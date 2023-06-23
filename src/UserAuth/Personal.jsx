@@ -82,10 +82,10 @@ export default function Personal () {
       });
       return;
     }
-    console.log(data);
+    // console.log(data);
     setIsLoading(true); // Set isLoading to true when form is submitted
     try {
-    console.log(Data)
+    // console.log(Data)
 
      await  axiosRequest.post('auth/userdetails/', JSON.stringify(Data), {
         headers: {
@@ -93,7 +93,7 @@ export default function Personal () {
           'Authorization': `JWT ${ user.access}`,
         }
       }).then((response) => {
-              console.log(response.data)
+              // console.log(response.data)
             axiosRequest.post('auth/address/',JSON.stringify(Address),{
               headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export default function Personal () {
               }
             }).then((res)=>{
               // Perform form submission logic here
-               console.log(res.data);
+              //  console.log(res.data);
       // Simulate API call
                new Promise(resolve => setTimeout(resolve, 3000));
                 setIsRedirect(true);
@@ -116,7 +116,7 @@ export default function Personal () {
             })
             }).catch((err)=>{
               alert("this Error in User Deatails")
-              console.log(Data)
+              // console.log(Data)
             })
 
 
@@ -129,7 +129,7 @@ export default function Personal () {
   
  
   
-  console.log(user)
+  // console.log(user)
   return(
 
     <form onSubmit={handleSubmit(onSubmit)}>

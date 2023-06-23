@@ -21,7 +21,7 @@ export default function Employer(props  ) {
   const navigate = useNavigate();
       React.useEffect(()=>{
           if(user.access === null ){
-            navigate("/")
+            navigate("/web_app")
           }else{
             axiosRequest.get(`auth/web/profile/${user.id}`, {
               headers: {
