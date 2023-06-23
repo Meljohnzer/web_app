@@ -30,7 +30,7 @@ export default function Employer(props  ) {
             }).then((response)=>{
               // console.log(response.data)
               if (response.data[0].userdetails.length === 0 ) {
-                navigate('/personal');
+                navigate('web_app/personal');
               } else {
                 console.log(null)
               }
