@@ -26,7 +26,7 @@ export default function Confirmemail  () {
       await new Promise(resolve => setTimeout(resolve, 5000));
       setIsRedirect(true);
        // Set redirect state to true after form submission is successful
-       navigate('/');
+       navigate('/web_app');
     } catch (error) {
       console.error(error);
     } finally {

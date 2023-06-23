@@ -67,7 +67,7 @@ const providervalue = useMemo(() => ({ user, setUser, page, setPage }), [user, s
        <Route path="SDashboard" element={<SDashboard/>} /> 
          <Route path="register" element={<Register/>} /> 
         <Route path="confirmemail" element={<Confirmemail/>} />
-        <Route index element={<Login/>} />
+        <Route path="web_app" element={<Login/>} />
         <Route path="personal" element={<Personal/>} />
         <Route path="Ecompany" element={<Company/>} />
         <Route path="Sguardian" element={<Guardian/>} />

@@ -54,7 +54,7 @@ function Appbar() {
   };
 
   const HandleLogout = () =>{
-    navigate('/')
+    navigate('/web_app')
     setUser({usertype:null,id:null,email:null,access:null})
   }
 
@@ -95,7 +95,7 @@ useEffect(()=>{
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/web_app"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

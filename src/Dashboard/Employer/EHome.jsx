@@ -46,7 +46,7 @@ const EHome = (props) =>{
 
     <div className='justify-center text-center  w-half esm:px-0 px-5'>
       <Joblist post={post} /> 
-      {console.log(post)}
+      {/* {console.log(post)} */}
     </div>
 
     

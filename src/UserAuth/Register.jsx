@@ -30,7 +30,7 @@ export default function Register () {
   };
   const onSubmit = async (data, event) => {
     event.preventDefault(); 
-    console.log(data.usertype);
+    // console.log(data.usertype);
 
     var Data = {
       usertype : data.usertype,
@@ -41,11 +41,11 @@ export default function Register () {
     setIsLoading(true); // Set isLoading to true when form is submitted
     try {
       // Perform form submission logic here
-      console.log(Data);
+      // console.log(Data);
      await axiosRequest.post('auth/api/users/',JSON.stringify(Data),{ headers: {
         'Content-Type': 'application/json'
       }}).then((response)=>{
-        console.log(response.status);
+        // console.log(response.status);
          // Simulate API call
        new Promise(resolve => setTimeout(resolve, 5000));
       setIsRedirect(true);
@@ -213,7 +213,7 @@ export default function Register () {
           <div className="text-sm pt-3 text-center">
                 <span>Already have an account? </span>
                 <button className="font-medium text-indigo-600 hover:text-indigo-500">
-                <Link to="/"> Login</Link>
+                <Link to="/web_app"> Login</Link>
                 </button>
               </div>
               

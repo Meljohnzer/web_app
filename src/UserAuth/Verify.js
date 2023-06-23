@@ -19,13 +19,13 @@ const Data = useParams()
   
   const onSubmit = async (data, event) => {
     event.preventDefault(); 
-    console.log(data);
+    // console.log(data);
     setIsLoading(true); // Set isLoading to true when form is submitted
     try {
       // Perform form submission logic here
-      console.log(data);
+      // console.log(data);
       axiosRequest.post('auth/api/users/activation/',Data,).then((response)=>{
-        console.log(response.data)
+        // console.log(response.data)
         alert("Account Activated")
      }).catch((err)=>{
         alert("Something Went Wrong!")
@@ -33,7 +33,7 @@ const Data = useParams()
       await new Promise(resolve => setTimeout(resolve, 5000));
       setIsRedirect(true);
        // Set redirect state to true after form submission is successful
-       navigate('/');
+       navigate('/web_app');
     } catch (error) {
       console.error(error);
     } finally {

@@ -16,7 +16,7 @@ export default function SDashboard() {
   const navigate = useNavigate();
   React.useEffect(()=>{
     if(user.access === null ){
-      navigate("/")
+      navigate("/web_app")
     }else{
       axiosRequest.get(`auth/web/profile/${user.id}`, {
         headers: {
@@ -52,7 +52,7 @@ export default function SDashboard() {
  <> <Home  hide = {page.active === 'Home' ? null : "none"}/> 
   <Bookmark hide = {page.active === 'Bookmarks' ? null : "none"}/> 
   <Activity hide = {page.active === 'Activity log' ? null : "none"}/> 
-  {console.log(page)}
+  {/* {console.log(page)} */}
 
   </>
   

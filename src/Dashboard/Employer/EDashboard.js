@@ -54,7 +54,7 @@ export default function Employer(props  ) {
  <> <EHome  hide = {page.active === 'Home' ? null : "none"}/> 
   <Applicants hide = {page.active === 'Applicants' ? null : "none"}/> 
   <Create hide = {page.active === 'Create' ? null : "none"}/> 
-  {console.log(user)}
+  {/* {console.log(user)} */}
 
   </>
   

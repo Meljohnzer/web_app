@@ -31,20 +31,20 @@ export default function Login  () {
   useEffect(() => {
   if(user.access){
     if(user.usertype === "Student"){
-      navigate("SDashboard")
+      navigate("/SDashboard")
     }else if(user.usertype === "Employer"){
-      navigate("EDashboard")
+      navigate("/EDashboard")
     }
   }else{
-    navigate('/')
+    navigate('/web_app')
   }
   }, [user]);
 
-  console.log(user)
+  // console.log(user)
   
   const onSubmit = async (data, event) => {
     event.preventDefault(); 
-    console.log(data);
+    // console.log(data);
     var Data ={
       email:data.email,
       password:data.password
@@ -56,7 +56,7 @@ export default function Login  () {
       await axiosRequest.post('auth/api/jwt/create/',JSON.stringify(Data),{ headers: {
         'Content-Type': 'application/json'
       }}).then((response)=>{
-        console.log(response.status)
+        // console.log(response.status)
         axiosRequest.get('auth/api/users/me/',{headers:{
           'Authorization': `JWT ${ response.data.access}`,
         }}).then(res=>{
@@ -223,7 +223,7 @@ return(
         <div className='border-t-2 mt-4'/>
         <div className="text-sm pt-3 text-center">
               <span>Doesn't have an account </span>
-              <Link to="register"><button className="font-medium text-indigo-600 hover:text-indigo-500" > Create one? </button></Link>
+              <Link to="/register"><button className="font-medium text-indigo-600 hover:text-indigo-500" > Create one? </button></Link>
               
             </div>
             
