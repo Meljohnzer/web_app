@@ -49,12 +49,12 @@ export default function Education () {
       await new Promise(resolve => setTimeout(resolve, 3000));
       setIsRedirect(true);
        // Set redirect state to true after form submission is successful
-       navigate('/Sguardian');
+       navigate('/web_app/Sguardian');
 
        axiosRequest.post('auth/education/', JSON.stringify(Data), headers)  
        .then((response) => {
          console.log(response.data);
-          navigate('/home')
+          navigate('/web_app')
        }).catch((err)=>{
          alert(err.status)
        })

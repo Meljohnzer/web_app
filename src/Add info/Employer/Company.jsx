@@ -55,7 +55,7 @@ export default function Company () {
       await new Promise(resolve => setTimeout(resolve, 3000));
       setIsRedirect(true);
        // Set redirect state to true after form submission is successful
-       navigate('/home');
+       navigate('/web_app');
     } catch (error) {
       console.error(error);
     } finally {

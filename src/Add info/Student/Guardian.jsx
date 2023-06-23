@@ -78,7 +78,7 @@ export default function Guardian () {
       await new Promise(resolve => setTimeout(resolve, 3000));
       setIsRedirect(true);
        // Set redirect state to true after form submission is successful
-       navigate('/home');
+       navigate('/web_app');
 
        await axiosRequest.post('auth/guardian/', JSON.stringify(Data), headers)  
        .then((response) => {
@@ -87,7 +87,7 @@ export default function Guardian () {
          new Promise(resolve => setTimeout(resolve, 3000));
         setIsRedirect(true);
          // Set redirect state to true after form submission is successful
-         navigate('/home');
+         navigate('/web_app');
   
        }).catch((err)=>{
          alert(err.status)
