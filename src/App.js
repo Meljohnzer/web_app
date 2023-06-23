@@ -77,7 +77,6 @@ const providervalue = useMemo(() => ({ user, setUser, page, setPage }), [user, s
         <Route path="EHome" element={<EHome/>} />
         <Route path="Create" element={<Create/>} />
         <Route path="applicants" element={<Applicants/>} />
-      
         <Route path="/activation/:uid/:token" element={<Verify/>} />
        
       </Routes>
