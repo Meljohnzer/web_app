@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.custom-shape-divider-bottom-1679102914 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  
+}
+
+.custom-shape-divider-bottom-1679102914 svg {
+  position: relative;
+  display: block;
+  width: calc(153% + 1.3px);
+  height: 393px;
+}
+
+.custom-shape-divider-bottom-1679102914 .shape-fill {
+  fill: #E3DC50;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1679102914 svg {
+      width: calc(137% + 1.3px);
+      height: 204px;
+  }
+}
+.custom-shape-divider-top-1679103157 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1679103157 svg {
+  position: relative;
+  display: block;
+  width: calc(122% + 1.3px);
+  height: 268px;
+}
+
+.custom-shape-divider-top-1679103157 .shape-fill {
+  fill: #1D1607;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1679103157 svg {
+      width: calc(137% + 1.3px);
+      height: 204px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
