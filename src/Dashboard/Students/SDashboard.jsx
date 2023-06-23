@@ -25,12 +25,12 @@ export default function SDashboard() {
       }).then((response)=>{
         // console.log(response.data)
           if (response.data[0].userdetails.length == 0) {
-            navigate('/personal');
+            navigate('/web_app/personal');
             
           } else if (response.data[0].guardian.length == 0) {
-            navigate('/Sguardian');
+            navigate('/web_app/Sguardian');
           } else if (response.data[0].educationbg.length == 0) {
-            navigate('/Seducation');
+            navigate('/web_app/Seducation');
           } else {
             console.log("null")
           }
