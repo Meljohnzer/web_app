@@ -82,9 +82,9 @@ const [FileReq2, setFileReq2] = React.useState('');
 
 
   return (
-<div className="flex flex-col justify-center lg:flex-row flex-wrap md:flex-row md:flex-wrap md:justify-center lg:justify-start p-2 items-center">
+<div className="flex flex-col justify-center lg:flex-row flex-wrap md:flex-row md:flex-wrap md:justify-start xs:justify-center lg:justify-start p-2 xs:items-center">
   { post.map((posts,index)=>(<div key={index}
-      className="border-2 justify-center items-center bg-cover bg-center  p-2 rounded-lg flex flex-col"
+      className="border-2 md:justify-center lg:justify-start xs:justify-center items-center bg-cover bg-center  p-2 rounded-lg flex flex-col"
       style={{ backgroundImage: `url(${cardImage})`, display: props.hide }}
     >
       <div

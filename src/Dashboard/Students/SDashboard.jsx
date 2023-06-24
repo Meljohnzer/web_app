@@ -47,7 +47,7 @@ export default function SDashboard() {
     <div className="bg-cover bg-center absolute inset-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <Appbar/>
       <Settings/>
-      <div className="bg-[#F7FAFF66] h-screen lg:justify-start md:justify-center relative flex inset-0 pt-20 px-2">
+      <div className="bg-[#F7FAFF66] h-screen lg:justify-start md:justify-center justify-center relative flex inset-0 pt-20 px-2">
       <div>
  <> <Home  hide = {page.active === 'Home' ? null : "none"}/> 
   <Bookmark hide = {page.active === 'Bookmarks' ? null : "none"}/> 

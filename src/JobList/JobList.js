@@ -26,7 +26,7 @@ const Joblist = ({ post, title, handleManage }) => {
 
   return (
     <div className="post-list ">
-      <div className="flex flex-col lg:flex-row flex-wrap md:flex-row md:flex-wrap md:justify-center lg:justify-start items-center">
+      <div className="flex flex-col lg:flex-row flex-wrap md:flex-row md:flex-wrap md:justify-center justify-center lg:justify-start items-center">
         {post.map((posts) => (
           <div className="post-preview p-1 max-w-xs" key={posts.id}>
             <div className=" container mx-auto bg-slate-300 bg-opacity-60 rounded-lg hover:bg-opacity-95 transition duration-300 ease-in">
